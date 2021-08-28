@@ -2,10 +2,16 @@ from django.forms import ModelForm, widgets
 from django import forms
 from . models import *
 class DateInput(forms.DateInput):
+    """
+    this class will get callender for date field
+    """
     input_type='date'
 
 
 class MovieForm(ModelForm):
+    """
+    this model will work for saving data from UI to movie model
+    """
     class Meta:
         model = Movies
         fields = '__all__'
@@ -15,6 +21,9 @@ class MovieForm(ModelForm):
         exclude = ['avg_rating']
 
 class ArtistForm(ModelForm):
+    """
+    this model will work for saving data from UI to artist model
+    """
     class Meta:
         model = Artist
         fields = '__all__'
@@ -23,6 +32,9 @@ class ArtistForm(ModelForm):
         }
 
 class AwardForm(ModelForm):
+    """
+    this model will work for saving data from UI to award model
+    """
     class Meta:
         model = Awards
         fields = '__all__'
@@ -32,6 +44,9 @@ class AwardForm(ModelForm):
 
 
 class RatingForm(ModelForm):
+    """
+    this model will work for saving data from UI to rating model
+    """
     class Meta:
         model = Rating
         fields = '__all__'
@@ -39,6 +54,9 @@ class RatingForm(ModelForm):
 
 
 class SearchForm(ModelForm):
-   class Meta:
-     model = Movies
-     fields = [ 'name']
+    """
+    this model will help in searching data from movie model
+    """
+    class Meta:
+        model = Movies
+        fields = [ 'name']
