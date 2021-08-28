@@ -1,0 +1,37 @@
+{% block content %}
+
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gener</th>
+            <th>Release Date</th>
+            <th>Language</th>
+            <th>Artist</th>
+            
+            <th>Duration</th>
+            
+            <th>Average Rating</th>
+        </tr>
+            {% for movie in context %}
+            <tr>
+                <td>{{movie.ID}}</td>
+                <td>{{movie.name}}</td>
+                <td>{{movie.genre}}</td>
+                <td>{{movie.release_date}}</td>
+                <td>{{movie.language}}</td>
+                <td>{% for artist in movie.artist.all  %}
+                    {{artist.name}}
+                {% endfor %}</td>
+                <td>{{movie.length}}</td>
+                
+                <td>{{movie.avg_rating}}</td>
+            </tr>
+            {% endfor %}    
+    </table>
+
+  
+{% endblock content %}
+
+
