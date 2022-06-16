@@ -12,7 +12,4 @@ jobs:
 
       - name: Run Super-Linter
         uses: sourav-crossml/IDMB@v3
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+       
