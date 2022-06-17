@@ -11,5 +11,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Super-Linter
-        uses: sourav-crossml/IDMB@v3
+        uses: ././sourav-crossml/IDMB@v3
        
